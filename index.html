@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="LinkSwift helps you check and open shared 123 Cloud Drive links.">
+  <title>LinkSwift — Cloud Link Helper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="LinkSwift home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+        <span>LinkSwift</span>
+      </a>
+      <span class="top-pill"><span class="status-dot"></span> Cloud link helper</span>
+    </nav>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> SIMPLE · FAST · CLEAR</div>
+      <h1 id="page-title">Your cloud link,<br><span>one step closer.</span></h1>
+      <p class="hero-copy">Paste a 123 Cloud Drive sharing link to validate its format and open the original share page.</p>
+
+      <form id="link-form" class="link-card">
+        <label for="share-link">123 Cloud Drive sharing link</label>
+        <div class="input-row">
+          <input id="share-link" name="share-link" type="url" inputmode="url"
+            placeholder="https://..." autocomplete="url" required>
+          <button type="submit" id="submit-button"><span>Check link</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="input-hint">Use a link you have permission to access.</p>
+        <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <div class="feature-row" aria-label="Features">
+        <div class="feature"><span class="feature-icon">✓</span><span>Link format check</span></div>
+        <div class="feature"><span class="feature-icon">↗</span><span>Open original share</span></div>
+        <div class="feature"><span class="feature-icon">⌁</span><span>No account details stored</span></div>
+      </div>
+    </section>
+
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="section-kicker">HOW IT WORKS</div>
+      <h2 id="steps-title">Three simple steps</h2>
+      <div class="step-grid">
+        <article class="step-card"><span class="step-number">01</span><h3>Paste your link</h3><p>Copy a 123 Cloud Drive share URL and paste it above.</p></article>
+        <article class="step-card"><span class="step-number">02</span><h3>Check the format</h3><p>LinkSwift checks that the address looks like a valid web link.</p></article>
+        <article class="step-card"><span class="step-number">03</span><h3>Open the share page</h3><p>Continue on the original service to preview or download available files.</p></article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> LinkSwift</span>
+      <span>Independent helper · Not affiliated with 123 Cloud Drive</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
